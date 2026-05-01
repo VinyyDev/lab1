@@ -15,7 +15,7 @@ jobs:
     # ONDE o robô vai rodar? (Em um servidor Ubuntu emprestado pelo GitHub)
     runs-on: ubuntu-latest
 
-    # 3. O PASSO A PASSO
+    # 3. O PASSO A PASSo
     steps:
       # Ação pronta do GitHub para fazer o 'git clone' do seu projeto
       - name: Baixar o código fonte
