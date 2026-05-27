@@ -3,12 +3,8 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-
-
-FROM eclipse-temurin:21-jre AS runtime
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
-# copia o arquivo JAR gerado para a imagem final
-
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
