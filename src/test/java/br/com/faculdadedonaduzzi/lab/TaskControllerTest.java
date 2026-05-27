@@ -17,7 +17,7 @@ public class TaskControllerTest {
     @Test
     public void testGetAllTasks() throws Exception {
         // O ERRO INTENCIONAL ESTÁ AQUI: Chamando "/tarefa" em vez de "/tarefas"
-        URL url = new URL("http://localhost:" + port + "/tarefa");
+        URL url = new URL("http://localhost:" + port + "/tarefas");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         int status = con.getResponseCode();
